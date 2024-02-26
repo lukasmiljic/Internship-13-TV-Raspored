@@ -1,7 +1,7 @@
 .tv-guide {
   width: 85%;
-  border: 2px solid var(--hg);
-  box-shadow: 8px 8px 0px 0px var(--hg);
+  border: 3px solid var(--hg);
+  box-shadow: 9px 10px 0px 0px var(--hg);
   cursor: default;
   display: flex;
   max-width: 1400px;
@@ -71,30 +71,33 @@
 }
 
 .slot {
-  width: 9%; /* calc(600/60) 60 is length of time in minutes*/
+  width: 9%; /* calc(660/60) 60 is length of time in minutes*/
   height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-right: 2px dotted var(--fg2);
   cursor: pointer;
-  transition: color 100ms ease-in-out;
+  transition: color 65ms ease-in-out;
 }
 
 .slot:hover {
   color: var(--hg);
 }
 
-.slot-title {
+.slot-title,
+.slot-start-time {
   font-weight: 700;
-  line-height: 16px;
+  line-height: 20px;
   padding-left: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .slot-start-time {
   font-weight: 200;
   font-size: 14px;
-  padding-left: 4px;
 }
 
 #content-title2 {
