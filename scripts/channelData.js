@@ -4,7 +4,7 @@ export const channels = [
     content: [
       {
         title: "TV kalendar",
-        startTime: "06:20",
+        startTime: "06:00",
         endTime: "06:34",
         description:
           "(Hrvatska) Dokumentarno-povijesna emisija, emitira se svakodnevno od 1976. godine. Prikazuje važne događaje i obljetnice iz hrvatske i svjetske povijesti.",
@@ -108,7 +108,7 @@ export const channels = [
     content: [
       {
         title: "Koordinacija",
-        startTime: "06:20",
+        startTime: "06:00",
         endTime: "07:00",
         description:
           "(Hrvatska) Organizacija gradilišta, koordiniranje, stalna komunikacija s građevinskim radnicima, samo su neki od poslova građevinskog poslovođe. Upoznajte poslovođu Josipa. Gost rubrike Notes je Matej Mihić s Građevinskog fakulteta u Zagrebu, a ujedno i predsjednik Hrvatske udruge koordinatora zaštite na radu. U Miljokazu vas vodimo na otok koji ima tek stotinjak stalnih stanovnika. Idemo na Zlarin. U Tips & Tricksima otkrivamo najčešće izazove pri ishođenju građevinske dozvole. I ovotjednu Koordinaciju započinjemo s Antinom garažom. Ondje nam je Ante Cash pripremio koncentrat znanja o parketima",
@@ -119,7 +119,7 @@ export const channels = [
       {
         title: "Monty Don i američki vrtovi",
         startTime: "07:00",
-        endTime: "08:01",
+        endTime: "08:21",
         description:
           "Redatelj: Daisy Newton-Dunn Priča: Monty Don (Jug, Engleska, 2020) Monty posjećuje poznati vrt predsjednika Thomasa Jeffersona, jednog od osnivača Sjedinjenih Država, te uživa u potrazi za sjemenjem i sadnicama za svoj povrtnjak. Odande putuje na jug, do Charlestona koji se diči nekim od najljepših vrsta drveća na svijetu te se detaljnije upoznaje o održavanju tamošnjih plantaža. U Miamiju posjećuje jednu od najspektakularnijih renesansnih replika izgrađenih na močvarnome tlu, a potom se pridružuje lovcu na orhideje u potrazi za rijetkim vrstama koje samo on zna kako pronaći.",
         Category: ["Dokumentarano", "Zabava"],
@@ -198,7 +198,7 @@ export const channels = [
       {
         title: "Na magistrali",
         startTime: "15:38",
-        endTime: "Na magistrali",
+        endTime: "16:00",
         description:
           "(Hrvatska, 2023) U dolini Neretve sijeku se svi važni prometni pravci: cesta, pruga i morska luka. Ovdje nema autoceste i sve do krajnjeg juga magistrala je baš kao u slavno doba, žila kucavica na kojoj je dinamičan lokalni život. ",
         Category: ["Dokumentarac", "Informativno"],
@@ -212,7 +212,7 @@ export const channels = [
     content: [
       {
         title: "RTL Danas",
-        startTime: "06:20",
+        startTime: "06:00",
         endTime: "07:05",
         description: "(Hrvatska, 2024)",
         Category: ["Informativno"],
@@ -258,8 +258,8 @@ export const channels = [
       },
       {
         title: "Grand designs: Australija",
-        startTime: "07:50",
-        endTime: "08:40",
+        startTime: "08:40",
+        endTime: "09:45",
         description:
           "(Australija) Spin-off britanske inačice, Grand Designs: Australia pokazuje gledateljima napore graditelja koji pokušavaju podići posebne kuće i domove, specijalno osmišljene prema idejama i nacrtima vlasnika te razne izazove i prepreke kojima se suočavaju graditelji. Kroz show nas vodi arhitekt Peter Maddison, koji se sastaje s vlasnicima koji pokazuju svoje originalne zamisli, nakon čega slijedi CAD (Computer Aided Design) s izgledom konstrukcije projekta.",
         Category: ["Zabava"],
@@ -299,17 +299,17 @@ export const channels = [
     ],
   },
   {
-    channelTitle: "Nova TV",
+    channelTitle: "NovaTV",
     content: [
       {
         title: "Dorothy i čarobnjak iz Oza",
-        startTime: "06:20",
+        startTime: "06:00",
         endTime: "06:55",
         description:
           "(Tik Tak i Limenko / Da sam barem mišićav, SAD, 2016) Tik Tak i Limenko: Dorothy i družina nađu Tik Taka, još jedno metalno biće koje se pokvarilo pokraj ceste i sad ga treba popraviti! Tik Tak odmah se zaljubi u Limenka kojega smatra velikim junakom. Želi biti baš poput njega, ali to nije u stanju reći jer mu ne funkcionira glasovni mehanizam. On nastoji zadiviti Limenka kojega pak muči hoće li ga Tik Tak zamijeniti. Limenkova je ljubomora na vrhuncu kada Tik Tak spasi ekipu od podivljalih izvora s planine Springfield. ",
         Category: ["Diječije", "Zabava"],
         Rerun: false,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "Supžva Bob Skockani",
@@ -319,7 +319,7 @@ export const channels = [
           "(Tim morskih superzlikovaca / Paprikaš od burgera, SAD, 2012) Plankton i Čovjek Raža se udružuju i imaju zajednički cilj: prvo osvojiti Rakovu poslasticu, a nakon toga - svijet! Kalamarko daje otkaz u Rakovoj poslastici kako bi radio kod Planktona u Prijateljskoj kantici. Preko noći ju je pretvorio u popularno okupljalište!",
         Category: ["Diječije", "Zabava"],
         Rerun: false,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "Lud, zbunjen, normalan",
@@ -329,7 +329,7 @@ export const channels = [
           "(Kućna dostava, Bosna i Hercegovina, 2008) San Remo traži zaposlenika za kućnu dostavu, a Izet (Mustafa Nadarević) je u potrazi za poslom. Kocke su se sklopile i Izet se zapošljava kao dostavljač pizza. Ivana posjećuje oftalmologa i dobije leće s dioptrijom, ali nije vješta u njihovom stavljanju. Dok joj Faruk (Senad Bašić) pokušava pomoći u tome, leća završavaju u čaši s vodom, a potom i u Izetovom trbuhu.",
         Category: ["Zabava"],
         Rerun: false,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "Lud, zbunjen, normalan",
@@ -338,7 +338,7 @@ export const channels = [
         description: "",
         Category: ["Zabava"],
         Rerun: true,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "Samo ti pričaj",
@@ -348,17 +348,17 @@ export const channels = [
           "(Hrvatska, 2015) Davida zabavlja Ivina novootkrivena zainteresiranost za astrologiju. Naime, Iva sve odgovore o njihovoj vezi pronalazi kod gospođe Esmeralde. S druge strane, Ivana nimalo ne zabavlja Dubravkino ispitivanje o tome kakav pogreb bi Ivan htio i želi li donirati organe u slučaju smrti. Marija odluči prodati stare stvari iz podruma i Stjepan se složi s njom, no ubrzo će promijeniti mišljenje.",
         Category: ["Zabava"],
         Rerun: false,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "TV izlog",
         startTime: "09:05",
         endTime: "09:20",
         description:
-          "(Hrvatska) Ponude TV izloga potražite na teletextu Nova TV-a na stranici 230!",
+          "(Hrvatska) Ponude TV izloga potražite na teletextu NovaTV-a na stranici 230!",
         Category: ["Prodaja"],
         Rerun: true,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "IN Magazin",
@@ -368,17 +368,17 @@ export const channels = [
           "(Hrvatska, 2024) Među brojnim zabavnim formatima Nove TV jedan od dugovječnijih je upravo popularan IN magazin kojeg pratimo od početka 2009., a nastaje pod uredničkom palicom glavne urednice Ivane Mandić.",
         Category: ["Zabava"],
         Rerun: false,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "TV izlog",
         startTime: "10:15",
         endTime: "10:30",
         description:
-          "(Hrvatska) Ponude TV izloga potražite na teletextu Nova TV-a na stranici 230!",
+          "(Hrvatska) Ponude TV izloga potražite na teletextu NovaTV-a na stranici 230!",
         Category: ["Prodaja"],
         Rerun: true,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "Ulica sjećanja",
@@ -388,7 +388,7 @@ export const channels = [
           "(Turska, 2022) Zejnep, koja slučajno sazna da se Halil vratio kući, osjeća se prevarenom. Svi osim nje svjesni su njegova povratka. Drugo razočarenje doživljava kada sazna da je Ali Fuat povukao slučaj. Iako Zeynep kaže da su se pomirili, iznenada dolazi u Alijev Fuatov dom kako bi otkrila pravi razlog ove iznenadne odluke.",
         Category: ["Drama", "Turska"],
         Rerun: true,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
       {
         title: "Oproštajno pismo",
@@ -398,7 +398,7 @@ export const channels = [
           "(Turska) Asli i Mehmet rade zajedno kako bi spasili Minu, dok Hatidže smišlja plan za zaštitu svoje obitelji. Nevzat se osjeća sve sigurnijim u svojim mračnim namjerama, dok se Selčuk pita gdje mu je mjesto u cijeloj priči. Dok se situacija u kući Karli sve više zakomplicira, istina se polako razotkriva, a posljedice će biti duboke i dalekosežne.",
         Category: ["Drama", "Turska"],
         Rerun: true,
-        channelTitle: "Nova TV",
+        channelTitle: "NovaTV",
       },
     ],
   },
