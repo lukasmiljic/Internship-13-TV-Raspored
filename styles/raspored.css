@@ -1,0 +1,110 @@
+.tv-guide {
+  width: 85%;
+  border: 2px solid var(--hg);
+  box-shadow: 8px 8px 0px 0px var(--hg);
+  cursor: default;
+  display: flex;
+  max-width: 1400px;
+}
+
+.scroll-wrapper {
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline {
+  width: 150vw; /*causes problems al larger widths when calcualting spot width*/
+  display: flex;
+  justify-content: end;
+  background-color: var(--bgcol2);
+  height: 54px;
+}
+
+.hour {
+  display: inline-block;
+  width: 20%;
+  margin: 10px 0px 10px 15px;
+  padding-top: 10px;
+  background-color: var(--bgcol2);
+  color: var(--fg2);
+  border-right: 2px dotted var(--fg2);
+}
+
+.hour:last-of-type {
+  border-right: none;
+}
+
+.channels-sidebar {
+  background-color: var(--bgcol2);
+  padding: 0px 15px;
+  padding-top: 54px;
+  display: flex;
+  flex-direction: column;
+}
+
+.channel {
+  height: 64px;
+  width: 64px;
+  object-fit: scale-down;
+  align-self: center;
+}
+
+.content {
+  width: 150vw;
+  height: calc(100% - 54px); /*try using something else*/
+  background-color: var(--bgcol1);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  /* border-top: 2px dotted var(--fg2); */
+}
+
+.row:nth-child(2n) {
+  background-color: var(--bgcol2);
+}
+
+.slot {
+  width: 9%; /* calc(600/60) 60 is length of time in minutes*/
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px dotted var(--fg2);
+  cursor: pointer;
+  transition: color 100ms ease-in-out;
+}
+
+.slot:hover {
+  color: var(--hg);
+}
+
+.slot-title {
+  font-weight: 700;
+  line-height: 16px;
+  padding-left: 4px;
+}
+
+.slot-start-time {
+  font-weight: 200;
+  font-size: 14px;
+  padding-left: 4px;
+}
+
+#content-title2 {
+  width: 18%;
+}
+
+#content-title3 {
+  width: 25%;
+}
+
+#content-title4 {
+  width: 6%;
+}

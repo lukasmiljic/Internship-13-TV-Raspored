@@ -1,0 +1,19 @@
+:root {
+  --fg: #404040;
+  --fg2: #babcbd;
+  --hg: #7e99ba;
+  --bgcol1: #e5f2ff;
+  --bgcol2: #fafafa;
+
+
+  --pattern: var(--bgcol1) 0% 5%, var(--bgcol2) 6% 15%, var(--bgcol1) 16% 25%,
+    var(--bgcol2) 26% 35%, var(--bgcol1) 36% 45%, var(--bgcol2) 46% 55%,
+    var(--bgcol1) 56% 65%, var(--bgcol2) 66% 75%, var(--bgcol1) 76% 85%,
+    var(--bgcol2) 86% 95%, #0000 96%;
+  --grad: radial-gradient(50% 50% at 100% 0, var(--pattern)),
+    radial-gradient(50% 50% at 0 100%, var(--pattern)),
+    radial-gradient(50% 50%, var(--pattern)),
+    radial-gradient(50% 50%, var(--pattern)) calc(var(--pattern-size) / 2)
+      calc(var(--pattern-size) / 2) var(--bgcol1);
+  --pattern-size: 148px;
+}
