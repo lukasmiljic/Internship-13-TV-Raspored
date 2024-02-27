@@ -1,6 +1,7 @@
 export const channels = [
   {
     channelTitle: "HRT1",
+    adult: false,
     content: [
       {
         title: "TV kalendar",
@@ -12,6 +13,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: true,
       },
       {
         title: "Grizzly Adams",
@@ -23,6 +25,7 @@ export const channels = [
         Rerun: true,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "Joe Kidd",
@@ -34,6 +37,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "Zajendno u duhu",
@@ -45,6 +49,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "Dobro jutro, Hrvatska",
@@ -56,6 +61,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "Prizma - multinacionalni magazin",
@@ -67,6 +73,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "TV kalendar",
@@ -78,6 +85,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "Dnevnik 1",
@@ -89,6 +97,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "Sport",
@@ -99,6 +108,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
       {
         title: "Vrijeme",
@@ -110,6 +120,7 @@ export const channels = [
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
+        adult: false,
       },
     ],
   },

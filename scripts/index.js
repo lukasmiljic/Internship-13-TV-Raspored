@@ -1,4 +1,5 @@
 import { channels } from "./channelData.js";
+const pin = 1234;
 
 function generateTVGuide() {
   const main = document.getElementsByTagName("main")[0];
@@ -115,6 +116,7 @@ slots.forEach((slot) => {
   });
 });
 
+//very messy, split this up
 function generateCard(title, startTime) {
   const cardContainer = document.createElement("div");
   cardContainer.classList.add("slot-info-card");
@@ -130,8 +132,14 @@ function generateCard(title, startTime) {
     (x) => x.startTime === startTime && x.title === title
   )[0];
   // console.log(slot);
+  if (slot.adult) {
+    const input = prompt("PIN");
+    if (input != pin) {
+      alert("wrong pin");
+      return;
+    }
+  }
   const rerun = title.rerun ? "rerun" : "";
-
   const categoriesHTML = slot.Category.reduce(
     (acc, category) => (acc += `<p class="category">${category}</p>`),
     ""
