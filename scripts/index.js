@@ -1,11 +1,13 @@
 import { channels } from "./channelData.js";
-const pin = 1234;
+let pin = 1234;
 
 function generateTVGuide() {
-  const main = document.getElementsByTagName("main")[0];
+  // const main = document.getElementsByTagName("main")[0];
 
-  const TVGuideContainer = document.createElement("div");
-  TVGuideContainer.classList.add("tv-guide");
+  // const TVGuideContainer = document.createElement("div");
+  // TVGuideContainer.classList.add("tv-guide");
+
+  const TVGuideContainer = document.getElementById("tv-guide");
 
   const channelsSideBar = document.createElement("div");
   channelsSideBar.classList.add("channels-sidebar");
@@ -27,7 +29,7 @@ function generateTVGuide() {
 
   TVGuideContainer.appendChild(scrollArea);
 
-  main.appendChild(TVGuideContainer);
+  // main.appendChild(TVGuideContainer);
 }
 
 function generateSideBar(parentElement) {
@@ -166,6 +168,22 @@ function generateCard(title, startTime) {
     document.querySelector(".slot-info-card").remove();
   });
 }
+
+document.getElementById("pin-button").addEventListener("click", () => {
+  let input = prompt("old pin");
+  if (input != pin) {
+    alert("wrong pin");
+    return;
+  }
+  input = prompt("enter new pin");
+  // debugger;
+  if (input.length >= 4 && input.length <= 8) {
+    pin = input;
+  } else {
+    alert("invalid new pin");
+    return;
+  }
+});
 
 // document.addEventListener("page-load", () => {
 //   document.querySelectorAll(".slot").forEach((el) => {

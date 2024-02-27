@@ -1,4 +1,4 @@
-.tv-guide {
+#tv-guide {
   width: 85%;
   border: 3px solid var(--hg);
   box-shadow: 9px 10px 0px 0px var(--hg);
@@ -159,4 +159,21 @@
 
 .fa-solid {
   cursor: pointer;
+}
+
+#pin-button {
+  margin-top: 2em;
+  background: var(--bgcol2);
+  color: var(--hg);
+  border: 2px solid var(--hg);
+  box-shadow: 4px 4px 0px 0px var(--hg);
+  padding: 0.75em;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  transition: font-size 35ms ease-in-out;
+}
+
+#pin-button:active {
+  font-size: 19px;
 }
