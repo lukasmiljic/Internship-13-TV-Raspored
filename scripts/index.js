@@ -188,8 +188,8 @@ function generateCard(title, startTime) {
   });
 
   document.getElementById("add-to-watchlist").addEventListener("click", () => {
-    if (watchlist.includes(slot)) return;
-    watchlist.push(slot);
+    if (watchlist.includes(slot.title)) return;
+    watchlist.push(slot.title);
     console.log(watchlist);
   });
 }
@@ -433,3 +433,25 @@ function filterByRating(rating) {
     });
   });
 }
+
+const watchlistCheckBox = document.getElementById("by-watchlist");
+watchlistCheckBox.addEventListener("change", () => {
+  filterByWatchlist(watchlistCheckBox.checked);
+});
+
+function filterByWatchlist(checkFlag) {
+  slots.forEach((slot) => {
+    console.log(watchlist);
+    if (!watchlist.includes(slot.id) && checkFlag) {
+      slot.classList.add("filtered");
+    } else if (!watchlist.includes(slot.id) && !checkFlag) {
+      slot.classList.remove("filtered");
+    }
+  });
+}
+
+document.querySelectorAll(".checkbox").forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    rating(checkbox.id, checkbox.checked);
+  });
+});
