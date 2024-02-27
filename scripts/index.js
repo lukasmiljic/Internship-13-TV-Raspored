@@ -1,5 +1,6 @@
 import { channels } from "./channelData.js";
 let pin = 1234;
+let watchlist = [];
 
 function generateTVGuide() {
   // const main = document.getElementsByTagName("main")[0];
@@ -121,7 +122,8 @@ slots.forEach((slot) => {
 //very messy, split this up
 function generateCard(title, startTime) {
   const cardContainer = document.createElement("div");
-  cardContainer.classList.add("slot-info-card");
+  cardContainer.classList.add("card");
+  cardContainer.classList.add("slot-info");
 
   let slots = [];
   channels.forEach((channel) => {
@@ -148,7 +150,7 @@ function generateCard(title, startTime) {
     ""
   );
 
-  console.log(categoriesHTML);
+  // console.log(categoriesHTML);
 
   cardContainer.innerHTML = `
     <div class="x-wrapper">
@@ -161,15 +163,30 @@ function generateCard(title, startTime) {
     <p class="card-time">${slot.startTime} - ${slot.endTime}</p>
     <p>${slot.description}</p>
     <p>${slot.rating}/5</p>
+    <button style="font-size:14px" id="add-to-watchlist">Add to watchlist</button>
   `;
 
   document.getElementsByTagName("main")[0].appendChild(cardContainer);
 
-  document.getElementById("close").addEventListener("click", () => {
-    document.querySelector(".slot-info-card").remove();
+  // document.getElementById("close").addEventListener("click", () => {
+  //   document.querySelector(".card").remove();
+  // });
+
+  document.querySelectorAll(".fa-solid").forEach((el) => {
+    el.addEventListener("click", () => {
+      console.log("click");
+      document.querySelector(".card").remove();
+    });
+  });
+
+  document.getElementById("add-to-watchlist").addEventListener("click", () => {
+    if (watchlist.includes(slot)) return;
+    watchlist.push(slot);
+    console.log(watchlist);
   });
 }
 
+//adult pin
 document.getElementById("pin-button").addEventListener("click", () => {
   let input = prompt("old pin");
   if (input === null) return;
@@ -187,16 +204,56 @@ document.getElementById("pin-button").addEventListener("click", () => {
   }
 });
 
-// document.addEventListener("page-load", () => {
-//   document.querySelectorAll(".slot").forEach((el) => {
-//     el.addEventListener("mouseover", () => {
-//       console.log("hover");
-//     });
-//   });
+//watchlista
+function generateWatchlistCard() {
+  const cardContainer = document.createElement("div");
+  cardContainer.classList.add("card");
+  cardContainer.classList.add("watchlist");
 
-//   document.querySelectorAll(".slot").forEach((el) => {
-//     el.addEventListener("mouseleave", () => {
-//       console.log("mouse leave");
-//     });
-//   });
-// });
+  let watchlistHTML = watchlist.reduce(
+    (acc, item) => (acc += `<p class="watchlist-item">${item.title}</p>`),
+    ""
+  );
+
+  if (watchlistHTML.length == 0) {
+    watchlistHTML = `<p>Watchlist is empty</p>`;
+  }
+
+  cardContainer.innerHTML = `
+    <div class="x-wrapper">
+      <i id="close" class="fa-solid fa-xmark"></i>
+    </div>
+    <h3 class="card-title">Watchlist</h3>
+    <div class="list-items">
+      ${watchlistHTML}
+    </div>
+  `;
+
+  document.getElementsByTagName("main")[0].appendChild(cardContainer);
+
+  document.querySelectorAll(".watchlist-item").forEach((el) => {
+    el.addEventListener("click", () => {
+      console.log("click");
+      console.log(el.innerHTML);
+      if (confirm("remove item from watchlist")) {
+        // watchlist.remove(watchlist.indexOf((x) => x.title === el.innerHTML));
+        watchlist = watchlist.filter((x) => x.title !== el.innerHTML);
+        console.log(watchlist);
+        document.querySelector(".card").remove();
+        generateWatchlistCard();
+      }
+    });
+  });
+
+  document.querySelectorAll(".fa-solid").forEach((el) => {
+    el.addEventListener("click", () => {
+      console.log("click");
+      document.querySelector(".card").remove();
+    });
+  });
+}
+
+document.getElementById("watchlist-button").addEventListener("click", () => {
+  console.log("click");
+  generateWatchlistCard();
+});

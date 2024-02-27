@@ -100,7 +100,7 @@
   font-size: 14px;
 }
 
-.slot-info-card {
+.card {
   max-width: 400px;
   border: 3px solid var(--hg);
   box-shadow: 9px 10px 0px 0px var(--hg);
@@ -111,6 +111,8 @@
 }
 
 .card-title {
+  font-family: "Zilla Slab";
+  font-size: 1.4em;
   color: var(--hg);
   margin: 0px;
   position: relative;
@@ -152,6 +154,19 @@
   margin-bottom: 0.7em;
 }
 
+.list-items p {
+  margin: 0px;
+}
+
+.watchlist-item {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.watchlist-item:hover {
+  color: var(--hg);
+}
+
 .x-wrapper {
   display: block;
   text-align: right;
@@ -161,8 +176,14 @@
   cursor: pointer;
 }
 
-#pin-button {
+.buttons {
+  display: flex;
+  height: 150%;
+  align-items: center;
   margin-top: 2em;
+}
+
+button {
   background: var(--bgcol2);
   color: var(--hg);
   border: 2px solid var(--hg);
@@ -172,8 +193,14 @@
   cursor: pointer;
   outline: inherit;
   transition: font-size 35ms ease-in-out;
+  margin-right: 1em;
 }
 
-#pin-button:hover {
+button:hover {
   font-size: 19px;
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
