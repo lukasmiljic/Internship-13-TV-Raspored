@@ -66,7 +66,7 @@ function generateContent(parentElement) {
       const length = calcTimeSlotLength(slot.startTime, slot.endTime);
       // console.log(slot.title + length);
       row.innerHTML += `
-      <div style="width: ${length}%" class="slot" id="content-${slot.title}">
+      <div style="width: ${length}%" class="slot" id="${slot.title}">
         <div class="slot-title">${slot.title}</div>
         <div class="slot-start-time">${slot.startTime}</div>
       </div>
@@ -102,17 +102,73 @@ function calculateMinutesBetweenDates(startTime, endTime) {
 
 generateTVGuide();
 
-// for (let i = 0; i < channels.length; i++) {
-//   for (let j = 0; j < channels[i].content.length - 1; j++) {
-//     // console.log(
-//     //   channels[i].content[j].endTime +
-//     //     " " +
-//     //     channels[i].content[j + 1].startTime
-//     // );
-//     if (
-//       channels[i].content[j].endTime != channels[i].content[j + 1].startTime
-//     ) {
-//       console.log(channels[i].content[j].title);
-//     }
-//   }
-// }
+// debugger;
+const slots = document.querySelectorAll(".slot");
+slots.forEach((slot) => {
+  slot.addEventListener("click", () => {
+    // console.log(slot.firstElementChild.innerHTML);
+    // console.log(slot.lastElementChild.innerHTML);
+    generateCard(
+      slot.firstElementChild.innerHTML,
+      slot.lastElementChild.innerHTML
+    );
+  });
+});
+
+function generateCard(title, startTime) {
+  const cardContainer = document.createElement("div");
+  cardContainer.classList.add("slot-info-card");
+
+  let slots = [];
+  channels.forEach((channel) => {
+    channel.content.forEach((slot) => {
+      slots.push(slot);
+    });
+  });
+
+  const slot = slots.filter(
+    (x) => x.startTime === startTime && x.title === title
+  )[0];
+  // console.log(slot);
+  const rerun = title.rerun ? "rerun" : "";
+
+  const categoriesHTML = slot.Category.reduce(
+    (acc, category) => (acc += `<p class="category">${category}</p>`),
+    ""
+  );
+
+  console.log(categoriesHTML);
+
+  cardContainer.innerHTML = `
+    <div class="x-wrapper">
+      <i id="close" class="fa-solid fa-xmark"></i>
+    </div>
+    <h3 class="card-title ${rerun}">${slot.title}</h3>
+    <div class="card-categories">
+      ${categoriesHTML}
+    </div>
+    <p class="card-time">${slot.startTime} - ${slot.endTime}</p>
+    <p>${slot.description}</p>
+    <p>${slot.rating}/5</p>
+  `;
+
+  document.getElementsByTagName("main")[0].appendChild(cardContainer);
+
+  document.getElementById("close").addEventListener("click", () => {
+    document.querySelector(".slot-info-card").remove();
+  });
+}
+
+// document.addEventListener("page-load", () => {
+//   document.querySelectorAll(".slot").forEach((el) => {
+//     el.addEventListener("mouseover", () => {
+//       console.log("hover");
+//     });
+//   });
+
+//   document.querySelectorAll(".slot").forEach((el) => {
+//     el.addEventListener("mouseleave", () => {
+//       console.log("mouse leave");
+//     });
+//   });
+// });
