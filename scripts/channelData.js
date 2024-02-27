@@ -282,7 +282,7 @@ export let channels = [
         channelTitle: "RTL",
       },
       {
-        title: "Dođi, pogodi, osvoji,",
+        title: "Dođi, pogodi, osvoji",
         startTime: "07:50",
         endTime: "08:40",
         description: "(Hrvatska) ",
