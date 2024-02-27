@@ -163,11 +163,11 @@ function generateCard(title, startTime) {
     <p class="card-time">${slot.startTime} - ${slot.endTime}</p>
     <p>${slot.description}</p>
     <div class="stars" style="display:flex">
-      <i id="1" class="fa-regular fa-star star"></i>
-      <i id="2" class="fa-regular fa-star star"></i>
-      <i id="3" class="fa-regular fa-star star"></i>
-      <i id="4" class="fa-regular fa-star star"></i>
-      <i id="5" class="fa-regular fa-star star"></i>
+      <i id="1" class="fa-regular fa-star card-star"></i>
+      <i id="2" class="fa-regular fa-star card-star"></i>
+      <i id="3" class="fa-regular fa-star card-star"></i>
+      <i id="4" class="fa-regular fa-star card-star"></i>
+      <i id="5" class="fa-regular fa-star card-star"></i>
     </div>
     <button style="font-size:14px" id="add-to-watchlist">Add to watchlist</button>
   `;
@@ -196,7 +196,7 @@ function generateCard(title, startTime) {
 
 //stars
 function handleStars(slotTitle, slotStartTime, slotRating) {
-  const stars = document.querySelectorAll(".fa-star");
+  const stars = document.querySelectorAll(".card-star");
 
   stars.forEach((star, index1) => {
     if (star.id <= slotRating) {
@@ -311,7 +311,7 @@ document.getElementById("watchlist-button").addEventListener("click", () => {
 
 //filtering
 
-function generateFilters() {
+function generateCategoryFilters() {
   const genre = document.getElementById("genre");
   const categoriesList = extractCategories(channels);
 
@@ -328,7 +328,7 @@ function generateFilters() {
   genre.innerHTML = categoriesHTML;
 }
 
-generateFilters();
+generateCategoryFilters();
 
 function extractCategories(channels) {
   const categoriesSet = new Set();
@@ -342,29 +342,90 @@ function extractCategories(channels) {
   return Array.from(categoriesSet);
 }
 
+function generateStarFilters() {
+  const container = document.getElementById("by-stars");
+
+  for (let i = 0; i < 5; i++) {
+    let star = document.createElement("div");
+    star.classList.add(`star-filters`);
+    star.setAttribute("id", `${i + 1}-stars`);
+
+    for (let j = i; j < 5; j++) {
+      star.innerHTML += `<i class="fa-regular fa-star star"></i>`;
+    }
+
+    container.appendChild(star);
+
+    star.addEventListener("click", () => {
+      console.log("click");
+      for (const child of star.children) {
+        if (child.classList.contains("fa-regular")) {
+          child.classList.remove("fa-regular");
+          child.classList.add("fa-solid");
+        } else {
+          child.classList.remove("fa-solid");
+          child.classList.add("fa-regular");
+        }
+      }
+
+      filterByRating(5 - i);
+    });
+  }
+}
+
+generateStarFilters();
+
 document.querySelectorAll(".checkbox").forEach((checkbox) => {
   checkbox.addEventListener("change", () => {
-    filter(checkbox.id, checkbox.checked);
+    rating(checkbox.id, checkbox.checked);
   });
 });
 
 console.log(extractCategories(channels));
 
-function filter(filter, checkFlag) {
+function rating(filter, checkFlag) {
   slots.forEach((slot) => {
     channels.forEach((channel) => {
       channel.content.forEach((channelsSlot) => {
         if (
           channelsSlot.title == slot.id &&
-          channelsSlot.Category.includes(filter) &&
+          (channelsSlot.Category.includes(filter) ||
+            channelsSlot.rating === filter) &&
           checkFlag
         ) {
           console.log(slot.id + channelsSlot.Category);
           slot.classList.add("filtered");
         } else if (
           channelsSlot.title == slot.id &&
-          channelsSlot.Category.includes(filter) &&
+          (channelsSlot.Category.includes(filter) ||
+            channelsSlot.rating === filter) &&
           !checkFlag
+        ) {
+          slot.classList.remove("filtered");
+        }
+      });
+    });
+  });
+}
+
+function filterByRating(rating) {
+  slots.forEach((slot) => {
+    channels.forEach((channel) => {
+      channel.content.forEach((channelsSlot) => {
+        debugger;
+        if (
+          channelsSlot.title == slot.id &&
+          channelsSlot.startTime == slot.lastElementChild.innerHTML &&
+          channelsSlot.rating !== rating &&
+          !slot.classList.contains("filtered")
+        ) {
+          console.log(slot.id + channelsSlot.rating);
+          slot.classList.add("filtered");
+        } else if (
+          channelsSlot.title == slot.id &&
+          channelsSlot.startTime == slot.lastElementChild.innerHTML &&
+          channelsSlot.rating !== rating &&
+          slot.classList.contains("filtered")
         ) {
           slot.classList.remove("filtered");
         }
