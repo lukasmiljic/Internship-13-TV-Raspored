@@ -56,7 +56,7 @@ export let channels = [
         endTime: "10:50",
         description:
           "(Hrvatska, 2024) Mozaična emisija koja od ponedjeljka do subote donosi aktualne informativne i zabavne sadržaje, s voditeljskim parom u studiju i gostima te uz reportaže i javljanja uživo iz cijele Hrvatske i redovite rubrike sa savjetima iz svih područja života.",
-        Category: ["Informativo"],
+        Category: ["Informativno"],
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
@@ -68,7 +68,7 @@ export let channels = [
         endTime: "11:38",
         description:
           "(Hrvatska) Multinacionalni magazin, donosi aktualnosti o manjinama i ljudskim pravima.",
-        Category: ["Informativo"],
+        Category: ["Informativno"],
         Rerun: false,
         rating: 1,
         channelTitle: "HRT1",
@@ -143,7 +143,7 @@ export let channels = [
         endTime: "08:21",
         description:
           "Redatelj: Daisy Newton-Dunn Priča: Monty Don (Jug, Engleska, 2020) Monty posjećuje poznati vrt predsjednika Thomasa Jeffersona, jednog od osnivača Sjedinjenih Država, te uživa u potrazi za sjemenjem i sadnicama za svoj povrtnjak. Odande putuje na jug, do Charlestona koji se diči nekim od najljepših vrsta drveća na svijetu te se detaljnije upoznaje o održavanju tamošnjih plantaža. U Miamiju posjećuje jednu od najspektakularnijih renesansnih replika izgrađenih na močvarnome tlu, a potom se pridružuje lovcu na orhideje u potrazi za rijetkim vrstama koje samo on zna kako pronaći.",
-        Category: ["Dokumentarano", "Zabava"],
+        Category: ["Dokumentarac", "Zabava"],
         Rerun: false,
         rating: 1,
         channelTitle: "HRT2",
@@ -346,7 +346,7 @@ export let channels = [
         endTime: "06:55",
         description:
           "(Tik Tak i Limenko / Da sam barem mišićav, SAD, 2016) Tik Tak i Limenko: Dorothy i družina nađu Tik Taka, još jedno metalno biće koje se pokvarilo pokraj ceste i sad ga treba popraviti! Tik Tak odmah se zaljubi u Limenka kojega smatra velikim junakom. Želi biti baš poput njega, ali to nije u stanju reći jer mu ne funkcionira glasovni mehanizam. On nastoji zadiviti Limenka kojega pak muči hoće li ga Tik Tak zamijeniti. Limenkova je ljubomora na vrhuncu kada Tik Tak spasi ekipu od podivljalih izvora s planine Springfield. ",
-        Category: ["Diječije", "Zabava"],
+        Category: ["Diječiji", "Zabava"],
         Rerun: false,
         rating: 1,
         channelTitle: "NovaTV",
@@ -357,7 +357,7 @@ export let channels = [
         endTime: "07:20",
         description:
           "(Tim morskih superzlikovaca / Paprikaš od burgera, SAD, 2012) Plankton i Čovjek Raža se udružuju i imaju zajednički cilj: prvo osvojiti Rakovu poslasticu, a nakon toga - svijet! Kalamarko daje otkaz u Rakovoj poslastici kako bi radio kod Planktona u Prijateljskoj kantici. Preko noći ju je pretvorio u popularno okupljalište!",
-        Category: ["Diječije", "Zabava"],
+        Category: ["Diječiji", "Zabava"],
         Rerun: false,
         rating: 1,
         channelTitle: "NovaTV",
