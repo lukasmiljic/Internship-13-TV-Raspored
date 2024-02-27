@@ -136,6 +136,7 @@ function generateCard(title, startTime) {
   // console.log(slot);
   if (slot.adult) {
     const input = prompt("PIN");
+    if (input === null) return;
     if (input != pin) {
       alert("wrong pin");
       return;
@@ -171,6 +172,7 @@ function generateCard(title, startTime) {
 
 document.getElementById("pin-button").addEventListener("click", () => {
   let input = prompt("old pin");
+  if (input === null) return;
   if (input != pin) {
     alert("wrong pin");
     return;
