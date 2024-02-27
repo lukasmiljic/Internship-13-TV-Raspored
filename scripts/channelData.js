@@ -11,7 +11,6 @@ export let channels = [
         Category: ["Edukativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT1",
         adult: true,
       },
       {
@@ -23,7 +22,6 @@ export let channels = [
         Category: ["Avanturistički", "Obiteljski", "Western"],
         Rerun: true,
         rating: 5,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -35,7 +33,6 @@ export let channels = [
         Category: ["Western", "Kauboj"],
         Rerun: false,
         rating: 2,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -47,7 +44,6 @@ export let channels = [
         Category: ["Vjerski"],
         Rerun: false,
         rating: 3,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -59,7 +55,6 @@ export let channels = [
         Category: ["Informativno"],
         Rerun: false,
         rating: 4,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -71,7 +66,6 @@ export let channels = [
         Category: ["Informativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -83,7 +77,6 @@ export let channels = [
         Category: ["Informativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -95,7 +88,6 @@ export let channels = [
         Category: ["Informativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -106,7 +98,6 @@ export let channels = [
         Category: ["Informativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT1",
         adult: false,
       },
       {
@@ -118,7 +109,6 @@ export let channels = [
         Category: ["Informativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT1",
         adult: false,
       },
     ],
@@ -135,7 +125,7 @@ export let channels = [
         Category: ["Informativno", "Zabava"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Monty Don i američki vrtovi",
@@ -146,7 +136,7 @@ export let channels = [
         Category: ["Dokumentarac", "Zabava"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Heartland",
@@ -157,7 +147,7 @@ export let channels = [
         Category: ["Drama", "Obiteljski"],
         Rerun: true,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Obitelji čudesnih životinja",
@@ -168,7 +158,7 @@ export let channels = [
         Category: ["Dokumentarac", "Edukativno"],
         Rerun: true,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Grantchester",
@@ -179,7 +169,7 @@ export let channels = [
         Category: ["Drama"],
         Rerun: true,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Lewis",
@@ -190,7 +180,7 @@ export let channels = [
         Category: ["Drama"],
         Rerun: true,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Inspektor Wallander",
@@ -200,7 +190,7 @@ export let channels = [
         Category: ["Krimi", "Drama"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Tragom leptira",
@@ -211,7 +201,7 @@ export let channels = [
         Category: ["Dokumentarac"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Crno-bijeli svijet",
@@ -222,7 +212,7 @@ export let channels = [
         Category: ["Dokumentarac"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
       {
         title: "Na magistrali",
@@ -233,7 +223,7 @@ export let channels = [
         Category: ["Dokumentarac", "Informativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "HRT2",
+        adult: false,
       },
     ],
   },
@@ -248,7 +238,7 @@ export let channels = [
         Category: ["Informativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "Kockić i prijatelji",
@@ -258,7 +248,7 @@ export let channels = [
         Category: ["Diječiji", "Edukativno"],
         Rerun: false,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "Yu-Gi-OH! Zexal",
@@ -269,7 +259,7 @@ export let channels = [
         Category: ["Diječiji", "Animirani"],
         Rerun: true,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "Štrumpfovi",
@@ -279,7 +269,7 @@ export let channels = [
         Category: ["Diječiji", "Animirani"],
         Rerun: false,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "Dođi, pogodi, osvoji",
@@ -289,7 +279,7 @@ export let channels = [
         Category: ["Zabava", "Kviz"],
         Rerun: true,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "Grand designs: Australija",
@@ -300,7 +290,7 @@ export let channels = [
         Category: ["Zabava"],
         Rerun: true,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "Noćna smjena",
@@ -311,7 +301,7 @@ export let channels = [
         Category: ["Drama", "Kviz"],
         Rerun: true,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "TV Prodaja",
@@ -322,7 +312,7 @@ export let channels = [
         Category: ["Prodaja"],
         Rerun: false,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
       {
         title: "Chicago u plamenu",
@@ -333,7 +323,7 @@ export let channels = [
         Category: ["Prodaja"],
         Rerun: false,
         rating: 1,
-        channelTitle: "RTL",
+        adult: false,
       },
     ],
   },
@@ -349,7 +339,7 @@ export let channels = [
         Category: ["Diječiji", "Zabava"],
         Rerun: false,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "Spužva Bob Skockani",
@@ -360,7 +350,7 @@ export let channels = [
         Category: ["Diječiji", "Zabava"],
         Rerun: false,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "Lud, zbunjen, normalan",
@@ -371,7 +361,7 @@ export let channels = [
         Category: ["Zabava"],
         Rerun: false,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "Lud, zbunjen, normalan",
@@ -381,7 +371,7 @@ export let channels = [
         Category: ["Zabava"],
         Rerun: true,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "Samo ti pričaj",
@@ -392,7 +382,7 @@ export let channels = [
         Category: ["Zabava"],
         Rerun: false,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "TV izlog",
@@ -403,7 +393,7 @@ export let channels = [
         Category: ["Prodaja"],
         Rerun: true,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "IN Magazin",
@@ -414,7 +404,7 @@ export let channels = [
         Category: ["Zabava"],
         Rerun: false,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "TV izlog",
@@ -425,7 +415,7 @@ export let channels = [
         Category: ["Prodaja"],
         Rerun: true,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "Ulica sjećanja",
@@ -436,7 +426,7 @@ export let channels = [
         Category: ["Drama", "Turska"],
         Rerun: true,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
       {
         title: "Oproštajno pismo",
@@ -447,7 +437,7 @@ export let channels = [
         Category: ["Drama", "Turska"],
         Rerun: true,
         rating: 1,
-        channelTitle: "NovaTV",
+        adult: false,
       },
     ],
   },
