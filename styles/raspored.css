@@ -71,7 +71,7 @@
 }
 
 .slot {
-  width: 9%; /* calc(660/60) 60 is length of time in minutes*/
+  width: 9%; /* this is caluclated in js*/
   height: 64px;
   display: flex;
   flex-direction: column;
@@ -100,14 +100,63 @@
   font-size: 14px;
 }
 
-#content-title2 {
-  width: 18%;
+.slot-info-card {
+  max-width: 400px;
+  border: 3px solid var(--hg);
+  box-shadow: 9px 10px 0px 0px var(--hg);
+  cursor: default;
+  background-color: var(--bgcol2);
+  padding: 25px;
+  position: absolute;
 }
 
-#content-title3 {
-  width: 25%;
+.card-title {
+  color: var(--hg);
+  margin: 0px;
+  position: relative;
 }
 
-#content-title4 {
-  width: 6%;
+.rerun::after {
+  content: "rerun";
+  position: absolute;
+  color: var(--fg2);
+  border: 2px solid var(--fg2);
+  border-radius: 15px;
+  padding: 0.2em 0.4em;
+  margin-left: 1em;
+  font-size: 12px;
+}
+
+.card-time {
+  margin: 0px;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.card-categories {
+  display: flex;
+  gap: 1em;
+  margin: 0px;
+}
+
+.category {
+  margin: 0px;
+  /* font-style: italic; */
+  color: var(--hg);
+  opacity: 0.75;
+  text-decoration: underline;
+  text-decoration-thickness: 1.2px;
+  text-underline-offset: 0.3em;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 0.7em;
+}
+
+.x-wrapper {
+  display: block;
+  text-align: right;
+}
+
+.fa-solid {
+  cursor: pointer;
 }
