@@ -85,6 +85,10 @@
   color: var(--hg);
 }
 
+.slot.filtered {
+  color: var(--fg2);
+}
+
 .slot-title,
 .slot-start-time {
   font-weight: 700;
@@ -209,4 +213,15 @@ button:hover {
 button:active {
   transform: translate(4px, 4px);
   box-shadow: none;
+}
+
+.filters {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.genre-filter {
+  display: block;
+  margin-right: 0.5em;
 }

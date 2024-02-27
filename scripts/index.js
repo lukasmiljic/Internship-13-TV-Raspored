@@ -308,3 +308,67 @@ document.getElementById("watchlist-button").addEventListener("click", () => {
   console.log("click");
   generateWatchlistCard();
 });
+
+//filtering
+
+function generateFilters() {
+  const genre = document.getElementById("genre");
+  const categoriesList = extractCategories(channels);
+
+  const categoriesHTML = categoriesList.reduce(
+    (acc, category) =>
+      (acc += `
+      <label class="genre-filter">
+        ${category}
+      <input class="checkbox" type="checkbox" name="" id="${category}" />
+    </label>`),
+    ""
+  );
+
+  genre.innerHTML = categoriesHTML;
+}
+
+generateFilters();
+
+function extractCategories(channels) {
+  const categoriesSet = new Set();
+
+  channels
+    .flatMap((channel) =>
+      channel.content.flatMap((content) => content.Category)
+    )
+    .forEach((category) => categoriesSet.add(category));
+
+  return Array.from(categoriesSet);
+}
+
+document.querySelectorAll(".checkbox").forEach((checkbox) => {
+  checkbox.addEventListener("change", () => {
+    filter(checkbox.id, checkbox.checked);
+  });
+});
+
+console.log(extractCategories(channels));
+
+function filter(filter, checkFlag) {
+  slots.forEach((slot) => {
+    channels.forEach((channel) => {
+      channel.content.forEach((channelsSlot) => {
+        if (
+          channelsSlot.title == slot.id &&
+          channelsSlot.Category.includes(filter) &&
+          checkFlag
+        ) {
+          console.log(slot.id + channelsSlot.Category);
+          slot.classList.add("filtered");
+        } else if (
+          channelsSlot.title == slot.id &&
+          channelsSlot.Category.includes(filter) &&
+          !checkFlag
+        ) {
+          slot.classList.remove("filtered");
+        }
+      });
+    });
+  });
+}
