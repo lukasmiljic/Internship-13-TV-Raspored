@@ -162,7 +162,13 @@ function generateCard(title, startTime) {
     </div>
     <p class="card-time">${slot.startTime} - ${slot.endTime}</p>
     <p>${slot.description}</p>
-    <p>${slot.rating}/5</p>
+    <div class="stars" style="display:flex">
+      <i id="1" class="fa-regular fa-star star"></i>
+      <i id="2" class="fa-regular fa-star star"></i>
+      <i id="3" class="fa-regular fa-star star"></i>
+      <i id="4" class="fa-regular fa-star star"></i>
+      <i id="5" class="fa-regular fa-star star"></i>
+    </div>
     <button style="font-size:14px" id="add-to-watchlist">Add to watchlist</button>
   `;
 
@@ -172,7 +178,9 @@ function generateCard(title, startTime) {
   //   document.querySelector(".card").remove();
   // });
 
-  document.querySelectorAll(".fa-solid").forEach((el) => {
+  handleStars(slot.title, slot.startTime, slot.rating);
+
+  document.querySelectorAll(".fa-xmark").forEach((el) => {
     el.addEventListener("click", () => {
       console.log("click");
       document.querySelector(".card").remove();
@@ -185,6 +193,49 @@ function generateCard(title, startTime) {
     console.log(watchlist);
   });
 }
+
+//stars
+function handleStars(slotTitle, slotStartTime, slotRating) {
+  const stars = document.querySelectorAll(".fa-star");
+
+  stars.forEach((star, index1) => {
+    if (star.id <= slotRating) {
+      star.classList.remove("fa-regular");
+      star.classList.add("fa-solid");
+    }
+  });
+
+  stars.forEach((star, index1) => {
+    star.addEventListener("click", () => {
+      console.log("click");
+      console.log(star.id);
+
+      channels.forEach((channel) => {
+        channel.content.forEach((slot) => {
+          if (slot.title === slotTitle && slot.startTime === slotStartTime) {
+            slot.rating = star.id;
+            console.log(slot.rating);
+          }
+        });
+      });
+
+      stars.forEach((star, index2) => {
+        if (index1 >= index2) {
+          star.classList.remove("fa-regular");
+          star.classList.add("fa-solid");
+        } else {
+          star.classList.remove("fa-solid");
+          star.classList.add("fa-regular");
+        }
+      });
+    });
+  });
+}
+// document.querySelectorAll(".fa-star").forEach((star) => {
+//   star.addEventListener("click", () => {
+//     console.log("click");
+//   });
+// });
 
 //adult pin
 document.getElementById("pin-button").addEventListener("click", () => {

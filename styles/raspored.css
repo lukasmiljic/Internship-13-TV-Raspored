@@ -167,6 +167,12 @@
   color: var(--hg);
 }
 
+.stars {
+  color: var(--hg);
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
 .x-wrapper {
   display: block;
   text-align: right;

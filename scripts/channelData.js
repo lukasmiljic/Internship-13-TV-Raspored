@@ -1,7 +1,6 @@
-export const channels = [
+export let channels = [
   {
     channelTitle: "HRT1",
-    adult: false,
     content: [
       {
         title: "TV kalendar",
