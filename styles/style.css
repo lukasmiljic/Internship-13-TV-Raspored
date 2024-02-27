@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("./colors-and-gradients.css");
 @import url("./raspored.css");
+@import url("./card.css");
+@import url("./filters.css");
 
 body {
   color: var(--fg);
@@ -25,4 +27,26 @@ main {
   text-underline-offset: 0.25em;
   cursor: pointer;
   text-align: center;
+}
+
+button {
+  background: var(--bgcol2);
+  color: var(--hg);
+  border: 2px solid var(--hg);
+  box-shadow: 4px 4px 0px 0px var(--hg);
+  padding: 0.75em;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  transition: font-size 35ms ease-in-out;
+  margin-right: 1em;
+}
+
+button:hover {
+  font-size: 19px;
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }

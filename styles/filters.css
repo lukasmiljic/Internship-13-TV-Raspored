@@ -1,0 +1,15 @@
+.filters {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.genre-filter {
+  display: block;
+  margin-right: 0.5em;
+}
+
+.star-filters {
+  cursor: pointer;
+}
