@@ -71,7 +71,7 @@
 }
 
 .slot {
-  width: 9%; /* defualt value but this is calulated later*/
+  width: 9%; /* default value but this is calulated later*/
   height: 64px;
   display: flex;
   flex-direction: column;
@@ -83,6 +83,8 @@
 
 .slot:hover {
   color: var(--hg);
+  min-width: max-content;
+  padding-right: 5px;
 }
 
 .slot.filtered {
