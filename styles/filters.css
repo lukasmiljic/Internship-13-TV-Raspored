@@ -6,6 +6,10 @@
 }
 
 .genre-filter {
+  text-align: right;
+}
+
+.genre-filter {
   display: block;
   margin-right: 0.5em;
 }

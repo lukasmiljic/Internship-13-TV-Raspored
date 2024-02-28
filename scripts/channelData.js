@@ -1,4 +1,4 @@
-export let channels = [
+export let channelData = [
   {
     channelTitle: "HRT1",
     content: [
@@ -442,3 +442,11 @@ export let channels = [
     ],
   },
 ];
+export let pin = 1234;
+export let watchlist = [];
+export function removeItemFromWatchlist(title) {
+  watchlist = watchlist.filter((listItem) => listItem !== title);
+}
+export function updatePin(newPin) {
+  pin = newPin;
+}
